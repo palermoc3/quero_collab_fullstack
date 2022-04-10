@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+  </style>
+  <style type="text/css">
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/dd6b01/00000000000000003b9af201/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/dd6b01/00000000000000003b9af201/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) 
+    format("woff"),url(https://use.typekit.net/af/dd6b01/00000000000000003b9af201/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) 
+    format("opentype");font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/3c1fcc/00000000000000003b9af202/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/3c1fcc/00000000000000003b9af202/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) 
+    format("woff"),url(https://use.typekit.net/af/3c1fcc/00000000000000003b9af202/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3) 
+    format("opentype");font-weight:300;font-style:italic;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/5beeef/00000000000000003b9af203/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/5beeef/00000000000000003b9af203/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) 
+    format("woff"),url(https://use.typekit.net/af/5beeef/00000000000000003b9af203/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) 
+    format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/a3f146/00000000000000003b9af204/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/a3f146/00000000000000003b9af204/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) 
+    format("woff"),url(https://use.typekit.net/af/a3f146/00000000000000003b9af204/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) 
+    format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/67d0df/00000000000000003b9af205/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/67d0df/00000000000000003b9af205/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3) 
+    format("woff"),url(https://use.typekit.net/af/67d0df/00000000000000003b9af205/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3) 
+    format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/ea6f17/00000000000000003b9af206/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/ea6f17/00000000000000003b9af206/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3) 
+    format("woff"),url(https://use.typekit.net/af/ea6f17/00000000000000003b9af206/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3) 
+    format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/0a779c/00000000000000003b9af207/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/0a779c/00000000000000003b9af207/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) 
+    format("woff"),url(https://use.typekit.net/af/0a779c/00000000000000003b9af207/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) 
+    format("opentype");font-weight:600;font-style:italic;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/206737/00000000000000003b9af208/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/206737/00000000000000003b9af208/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) 
+    format("woff"),url(https://use.typekit.net/af/206737/00000000000000003b9af208/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) 
+    format("opentype");font-weight:600;font-style:normal;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/61d304/00000000000000003b9af209/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/61d304/00000000000000003b9af209/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) 
+    format("woff"),url(https://use.typekit.net/af/61d304/00000000000000003b9af209/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) 
+    format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/bd143b/00000000000000003b9af20a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/bd143b/00000000000000003b9af20a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) 
+    format("woff"),url(https://use.typekit.net/af/bd143b/00000000000000003b9af20a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) 
+    format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/a83ca1/00000000000000003b9af20b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/a83ca1/00000000000000003b9af20b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3) 
+    format("woff"),url(https://use.typekit.net/af/a83ca1/00000000000000003b9af20b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3) 
+    format("opentype");font-weight:800;font-style:normal;font-stretch:normal;font-display:auto;}
+    @font-face{font-family:proxima-soft;
+    src:url(https://use.typekit.net/af/cc5458/00000000000000003b9af20c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3) 
+    format("woff2"),url(https://use.typekit.net/af/cc5458/00000000000000003b9af20c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3) 
+    format("woff"),url(https://use.typekit.net/af/cc5458/00000000000000003b9af20c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3) 
+    format("opentype");font-weight:800;font-style:italic;font-stretch:normal;font-display:auto;}
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="primaryNavBg">
+      <div class="primaryNav ui-container">
+        <div class="content">
+          <a class="logo" href="#">rio.</a>
+          <a href="#">goals</a>
+          <a href="#">praise</a>
+          <a href="#">review</a>
+          <a href="#">atlas</a>
+          <a class="selected" href="#">social</a>
+        </div>
+        <div class="user">
+          <a href="#" class="question-mark">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21 21" width="21" height="21">
+              <g fill="none" fill-rule="evenodd" stroke="#8E98A7" stroke-linecap="round" stroke-linejoin="round">
+                <path d=" M 6.768 16.007 C 6.825 16.657 6.754 17.314 6.564 17.941 C 6.432 18.38 6.58 18.854 6.938 19.148 C 7.297 19.441 7.801 19.5 8.218 19.293 C 9.39 18.714 10.949 17.71 11.894 16.167 L 12.673 16.167 C 16.792 16.167 20.127 12.904 20.127 8.877 C 20.127 4.849 16.792 1.585 12.673 1.585 L 8.33 1.585 C 4.516 1.585 1.316 4.401 0.914 8.109 C 0.514 11.819 3.039 15.226 6.769 16.006 L 6.767 16.006 L 6.768 16.007 Z "></path>
+                <path d=" M 8.33 5.566 C 10.872 4.344 12.887 5.237 13 6.949 C 12.887 8.784 9.781 9.296 9.894 10.975"></path>
+                <line x1="9.911" y1="12.686" x2="9.911" y2="13"></line>
+              </g>
+            </svg>
+          </a>
+          <div class="market-container">
+            <a href="#" class="market">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 22">
+                <g fill="none" fill-rule="evenodd" stroke="#8E98A7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5.543 8.917v-5c0-1.38 1.11-2.5 2.48-2.5h4.955c1.37 0 2.48 1.12 2.48 2.5v5M7.196 6h6.608"></path>
+                  <path d="M17.11 6.417h2.477v14.166H1.413V6.417H3.89"></path>
+                  <path d="M10.5 12.25c0-1.012-.895-1.813-1.93-1.644-.812.133-1.374.903-1.374 1.733v.053c0 .442.174.866.484 1.18l2.82 2.844 2.82-2.845c.31-.313.484-.737.484-1.18v-.053c0-.83-.562-1.6-1.374-1.734-1.035-.17-1.93.632-1.93 1.644"></path>
+                </g>
+              </svg>
+              <span>800</span>
+            </a>
+          </div>
+          <a href="#" class="profile-picture">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="secondaryNavBg">
+      <div class="secondaryNav ui-container">
+        <a href="#" class="companyContainer">
+          <img src="https://avatars.slack-edge.com/2019-10-16/785216383266_ace3f411641ffe9c51e7_34.png" alt="785216383266 ace3f411641ffe9c51e7 34">
+          <span>quero educação</span>
+        </a>
+      </div>
+    </div>
+    <div class="trash"></div>
+  </header>

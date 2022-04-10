@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @most_ranked_post.user_id %>
+</p>
+
+<p>
+  <strong>Posts:</strong>
+  <%= @most_ranked_post.posts_id %>
+</p>
+
+<%= link_to 'Edit', edit_most_ranked_post_path(@most_ranked_post) %> |
+<%= link_to 'Back', most_ranked_posts_path %>

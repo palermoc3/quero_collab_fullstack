@@ -1,0 +1,31 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="first-section your-section">
+    <div class="first-section your-post ui-container">
+      <div class="your-post__header">
+        Qual a boa?
+      </div>
+      <div class="your-post__publication">
+       <%= form.text_field :text %>
+      </div>
+      <hr>
+      <div class="your-post__button-container">
+        <button class="your-post__button">
+         <% form.submit %>
+          publicar
+        </button>
+      </div>
+    </div>
+
+  </div>
+<% end %>
